@@ -52,3 +52,22 @@ ScrollReveal().reveal(".job__card", {
     duration: 1000,
     interval: 500,
 });
+
+ScrollReveal().reveal(".offer__card", {
+    ...scrollRevealOption,
+    interval: 500,
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+      autoplay: {
+        delay: 4000, // Cambia cada 4 segundos (4000 ms)
+        disableOnInteraction: false, // Sigue reproduciendo aunque interactúes con el swiper
+      },
+    });
+  });
